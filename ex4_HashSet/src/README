@@ -1,0 +1,55 @@
+adi_hava
+208980755
+ex4
+
+=============================
+=      File description     =
+=============================
+SimpleHashSet.java - abstract class that for ClosedHashSet and OpenHashSet.
+OpenHashSet.java - implementation of OpenHashSet class
+ClosedHashSet.java - implementation of ClosedHashSet class
+CollectionFacadeSet.java - wrapper for the SimpleSet class
+SimpleSetPerformanceAnalyzer.java - implementation for time analysis class
+RESULTS - the results of time analysis.
+
+=============================
+=       More Details        =
+=============================
+
+In general, I did the best I could to make the code as simple and as can, with maximum modularity.
+
+I want to discuss the OpenHashSet class.
+I created wrapper as recommended in the description. Because of the usage of the wrapper class, I created
+nested class inside OpenHashSet class that wraps the LinkedList that in the array.
+
+I want to discuss the ClosedHashSet deletion.
+I chose to use an assist method that finds the exact index of the array. I used this function also for
+"contains" method. If the finding method finds the index, so it replaces the String we want to remove with
+"null".
+
+We can see that the add was "pricey" in OpenHashSet. I was surprised that was the result I thought it will
+be faster. In a second thought, I realised that the resize will br tough in OpenHashSet. it means we will go
+over every LinkedList and re-clamp (re-Hash) every single string. The extra-loop on the linked list might take
+ a time.
+
+ The ClosedHashSet was better in adding objects and in finding the negative string. The linear tecniqe works
+ better in finding objects with the same hash code, because we did it in greater gap then +1. While in
+ OpenHashCode, we had to
+ go over
+  all the relevant linked list, one by one. That takes time.
+
+ The OpenHashSet had a tiny advantage in finding "hi" which has a uniqe hash-code, that's because it got
+ directly to the right cell.
+
+ I think I would have choose Closed most of the time. Just if I had short list of objects with a varied number
+ of hash-codes (that the modules are varied) like data2.
+
+As I said - the Closed was more efficient most of the time, but dealing with data2. If we compare them to
+HashSet (Java's default) it had similar performance to Closed, maybe because it had similar tecniqe of
+storage. HashSet was surprisingly slower in data1 than Closed, maybe because it tries to add it to the same
+cell time after time when Closed checks the cell every time before trying.
+
+Note - I used "Math.abs" in "clamp" because the module operator ("%") had issues with the positivity, I don't
+know why.
+
+I hope you'll enjoy checking my code. Anyway, Wabba-Daba-Dub-Dub!

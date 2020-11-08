@@ -1,0 +1,41 @@
+adi_hava
+208980755
+
+=============================
+=      File description     =
+=============================
+Storage.java - an abstract class that "Locker" and "LongTermStorage" implements.
+Locker.java - implements the Locker class.
+LockerTest.java - class that holds the test for Locker class.
+LongTermStorage.java - implements the LongTermStorage class.
+LongTermTest.java - class that holds the test for Locker LongTermStorage class.
+Spaceship.java - implements the Spaceship class.
+SpaceshipTest.java - class that holds the test for Locker Spaceship class.
+SpaceshipDepositoryTest.java - class that suits all the tests.
+TestRunner.java - the file that runs the tests.
+
+BoopingSite.java - implements the BoopingSite class.
+BoopingSiteTest.java - abstract class that holds the test for BoopingSite class.
+
+=============================
+=       More Details        =
+=============================
+~~~The Spaceship part~~~
+In general, I did the best I could to make the code as simple and as can, with maximum modularity.
+
+I want to discuss the Storage class.
+When I read the API of Locker and LongTermStorage, I've noticed that they have a lot in common, including
+methods and parameter. Therefore, I created an abstract class that gathers the common methods & parameters.
+
+In the tests for this part I created objects that presents an edge instances.
+
+~~~The Booping site part~~~
+In general, I did the best I could to make the code as simple and as can, with maximum modularity.
+
+My policy was sorting the array using different method for every category.
+I used "TreeMap" to help me sort the arrays.
+
+The tests to that part are written in a universal way, means that every BoopingSite object should pass this
+tests.
+
+I hope you'll enjoy checking my code. Anyway, Wabba-Daba-Dub-Dub!

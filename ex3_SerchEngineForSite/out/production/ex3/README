@@ -1,0 +1,31 @@
+adi_hava
+208980755
+
+=============================
+=      File description     =
+=============================
+SpaceShip.java - implements the SpaceShip class.
+SpaceShipFactory - implements the ships creator class.
+ActionZone.java - implements the operation zone for SpaceShip class.
+
+=============================
+=       More Details        =
+=============================
+In general, I used the API that I've got.
+I added "update Energy" function, that justify the energy level doesn't pass the max energy level.
+
+Let's talk about the Drunk and Special types I created -
+
+The Drunk type has fall asleep on the control panel, therefore he moves randomly to all the directions and
+accelerate or not randomly. He will try to teleport and will shoot or put a shield on based on a random
+parameters.
+
+The Special type is characterize by changing his behave every few round. He will be a Basher, an Aggressive, a
+ Runner - and will even mimic the Human player... Is'nt that creepy?
+
+Now, I want to discuss the ActiveZone class.
+when I looked at my coding mission, I thought I'll have a lot of repetitive motives on the action part. Most
+of the SpaceShip objects are interested at the same information, such as the closest SpaceShip and the angle
+to her. Therefor, I created an whole class that implements the operation system.
+
+I hope you'll enjoy checking my code. Anyway, Wabba-Daba-Dub-Dub!

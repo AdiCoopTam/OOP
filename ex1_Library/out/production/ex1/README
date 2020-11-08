@@ -1,0 +1,26 @@
+adi_hava
+208980755
+
+=============================
+=      File description     =
+=============================
+Book.java - implements the Book class.
+Patron.java - implements the Patron class.
+Library.java - implements the Library class.
+
+
+=============================
+=       More Details        =
+=============================
+In general, I used the API that I've got.
+I want to explain a template I used in Library class.
+I created an arrays to document the data in the library -
+bookLst, to store the data about the books the library have;
+patronLst, to store the data about the patrons that registered to the library;
+patronEnjoymentThreshold, to store the data about how many books every patron already borrowd.
+
+Another interesting method I had was the indexing method. I chose to associate the ID of the book or patron
+with his index in the array. That way, it was easy to approach to the data about the object (for example,
+checking if a book is borrowed or not).
+
+I hope you'll enjoy checking my code. Anyway, Wabba-Daba-Dub-Dub!
